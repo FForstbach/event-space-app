@@ -1,0 +1,12 @@
+<h1>Create a new venue</h1>
+
+<%= simple_form_for @venue do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :capacity %>
+  <%= f.input :price %>
+  <%= f.input :category, collection: ["Party", "Conference"] %>
+  <%= f.submit "Submit Venue" %>
+<% end %>
+
+<%= link_to "Go back to Venues", venues_path %>

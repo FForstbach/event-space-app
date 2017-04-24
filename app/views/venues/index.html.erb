@@ -1,0 +1,12 @@
+<h1>Venues</h1>
+<h2>this is the page where the venues will be shown</h2>
+
+<ul>
+<%= @venues.each do |venue| %>
+<li><%= venue.address %></li>
+<% end %>
+</ul>
+
+<%= link_to "Create a new venue", new_venue_path  %>
+
+<%= link_to "Go Back to Home", root_path  %>

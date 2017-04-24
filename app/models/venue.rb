@@ -1,7 +1,8 @@
 class Venue < ApplicationRecord
   belongs_to :user
+  validate :name, presence: true
   validates :address, presence: true
-  validates :capacity
+  validates :capacity, presence: true
   validates :category, presence: true
-  validates :price
+  validates :price, presence: true, numericality: { only_integer: true }
 end
