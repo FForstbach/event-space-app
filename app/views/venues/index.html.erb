@@ -1,21 +1,15 @@
 
 <h1 class="text-center"> Spacebook </h1>
 
-
   <div class="container">
     <%= image_tag "banner.png", class: "banner" %>
       <div class="row">
           <div class="col-xs-12 col-sm-4">
             <div class="card text-center">
               <h1> VENUES </h1>
-                <% @venues.each do |venue| %>
-                  <% venue.picture %>
-                    <div class="card-header" style="background-image: url('<%= image_path venue.picture%>')">
-                    </div>
-                <% end %>
+                <p>this will be the card</p>
               <div class="card-body">
-              <%= link_to venue.name, venues_path(venue) %>
-            </div>
+              </div>
           </div>
         </div>
         <div class="col-xs-6 col-sm-3">
