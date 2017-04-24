@@ -5,4 +5,6 @@ class Venue < ApplicationRecord
   validates :capacity, presence: true
   validates :category, presence: true
   validates :price, presence: true, numericality: { only_integer: true }
+
+  mount_uploader :photo, PhotoUploader
 end
