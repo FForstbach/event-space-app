@@ -16,7 +16,7 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
     @venue.user = current_user
     if @venue.save
-      redirect_to venues_path(@venue)
+      redirect_to venues_path
     else
       render :new
     end
