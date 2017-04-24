@@ -1,9 +1,6 @@
 
 <h1 class="text-center"> Spacebook </h1>
 
-  <div class="text-center padded">
-    <%= link_to "Bookings", booking_path, class: "home-button" %>
-  </div>
 
   <div class="container">
     <%= image_tag "banner.png", class: "banner" %>
@@ -17,7 +14,7 @@
                     </div>
                 <% end %>
               <div class="card-body">
-              <%= link_to venue.name, venue_path(venue) %>
+              <%= link_to venue.name, venues_path(venue) %>
             </div>
           </div>
         </div>
