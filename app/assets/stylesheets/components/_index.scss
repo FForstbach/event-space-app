@@ -1,3 +1,43 @@
 @import "alert";
 @import "avatars";
 @import "badges";
+
+// .card {
+//   height: 175px;
+//   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+//   background-size: cover !important;
+//   color: white;
+//   position: relative;
+
+// }
+
+
+// .venues {
+//   height: 175px;
+
+// }
+
+
+.category-name {
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.category-list {
+  display: flex;
+}
+
+.category-item {
+  padding: 10px;
+}
+
+.venues {
+    display: inline-block;
+    width: 100vh;
+    text-align: center;
+    // height: 143px;
+    // margin: 0 10px;
+    // margin-bottom: 30px;
+}
