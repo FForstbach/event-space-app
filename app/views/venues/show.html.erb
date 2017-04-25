@@ -1,4 +1,4 @@
 <h1><%= @venue.name %></h1>
 <h2>This is the detail page for a venue</h2>
 
-    <%= link_to "Send Booking Request (New booking)", new_booking_path %>
+<%= link_to "Send Booking Request (New booking)", new_venue_booking_path(@venue) %>
