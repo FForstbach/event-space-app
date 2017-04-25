@@ -2,16 +2,8 @@
 <div class="container">
 <!--  -->
 
-<div class="row">
-  <%= simple_form_for @venue, as: 'user_inline',
-    wrapper: :inline_form,
-    html: { class: 'form-inline' } do |f| %>
-    <%= f.error_notification %>
-    <%= f.input :address, placeholder: 'Address' %>
-    <%= f.input :capacity, placeholder: 'Capacity' %>
-    <%= f.submit "Search again", class: "btn btn-primary" %>
-  <% end %>
-</div>
+<%= render "shared/search_form" %>
+
 <hr>
 <div class="row text-center">
 <h1> VENUES </h1>
