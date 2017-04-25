@@ -4,21 +4,27 @@
 @import "banner";
 @import "button";
 
-// .card {
-//   height: 175px;
-//   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-//   background-size: cover !important;
-//   color: white;
-//   position: relative;
+.border-right {
+    border-right: 1px solid black;
+}
 
-// }
+.border-right {
+    border-right: 1px solid black;
+}
 
 
-// .venues {
-//   height: 175px;
+.home-content {
+  text-align: center;
+}
 
-// }
 
+.featured_venues {
+  margin-top: 50px;
+}
+
+.featured_venues .card {
+  margin-top: 20px;
+}
 
 .category-name {
   bottom: 10px;
@@ -29,9 +35,8 @@
 
 .card-category {
   text-transform: uppercase;
-
+  margin: 15px 15px;
 }
-
 
 .category-item {
   padding: 10px;
@@ -41,6 +46,7 @@
     display: inline-block;
     width: 100%;
     text-align: center;
+    margin: 15px 15px;
     // height: 143px;
     // margin: 0 10px;
     // margin-bottom: 30px;
