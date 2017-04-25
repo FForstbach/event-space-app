@@ -1,4 +1,27 @@
 <h1><%= @venue.name %></h1>
-<h2>This is the detail page for a venue</h2>
+<div class="container">
+  <div class="row">
+    this is the google map
+  </div>
+  <div class="row">
+    this is where the venue info goes
+  </div>
+  <div class="row">
+
+      <h3>Booking Information</h3>
+
+        <div class="col-md-6">
+        <h4>Contact</h4>
+        <% simple_form_for @booking do |f| %>
+          <%= f.input :start  %>
+          <%= f.input :end  %>
+          <%= f.submit "Request Booking" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <%= link_to "Send Booking Request (New booking)", new_venue_booking_path(@venue) %>
