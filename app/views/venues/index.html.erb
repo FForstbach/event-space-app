@@ -1,17 +1,34 @@
 
-
-  <div class="container">
+<div class="container">
 <!--  -->
-      <div class="row">
-        <div class="col-xs-6 col-sm-3">
-          <div class="card text-center">
-            <h1> VENUES </h1>
-              <div class="card-body">
-                <p>this will be the card</p>
-              </div>
-          </div>
+
+<div class="row">
+  <%= simple_form_for @venue, as: 'user_inline',
+    wrapper: :inline_form,
+    html: { class: 'form-inline' } do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :address, placeholder: 'Address' %>
+    <%= f.input :capacity, placeholder: 'Capacity' %>
+    <%= f.submit "Search again", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<hr>
+<div class="row text-center">
+<h1> VENUES </h1>
+  <div class="col-xs-6 col-sm-3">
+    <div class="card text-center">
+        <div class="card-body">
+          <% @venues.each do |venue| %>
+            <p><%= venue.name %></p>
+            <p><%= venue.address %></p>
+            <p><%= venue.capacity %></p>
+            <p><%= venue.price %></p>
+            <hr>
+          <% end %>
         </div>
-      </div>
+    </div>
+  </div>
+</div>
 
 
 

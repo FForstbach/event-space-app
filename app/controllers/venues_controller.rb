@@ -2,6 +2,11 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.all
+    if @venue
+      @venue = Venue.find(params[:id])
+    else
+    @venue = Venue.new
+    end
   end
 
   def show
