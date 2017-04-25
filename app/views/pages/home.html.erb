@@ -1,6 +1,63 @@
-<h1>Home</h1>
-<p>This is where our homepage is located</p>
+<div class="home-banner">
+  <%= image_tag "banner3.png", class: "banner" %>
+  </div>
 
-<h2>Our venues</h2>
 
-<%= link_to "Show Venues", venues_path %>
+
+
+    <div class="row">
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+        <%= image_tag "barvenue.jpg", class: "venues" %>
+          <div class="card-category">bars</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+        <%= image_tag "coworkingspaces.jpg", class: "venues" %>
+          <div class="card-category">co-working spaces</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+        <%= image_tag "clubspace.jpg", class: "venues" %>
+          <div class="card-category">clubs</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+        <%= image_tag "openconceptspaces.jpg", class: "venues" %>
+          <div class="card-category">mixed-use</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+        <%= image_tag "outdoorspace.jpg", class: "venues" %>
+          <div class="card-category">outdoor space</div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+        <%= image_tag "restaurants.jpg", class: "venues" %>
+          <div class="card-category">restaurants</div>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="text-center">
+      <p> <%= link_to "show venues", venues_path, class: "home-button" %> </p>
+        <% @featured_venues.each do |venue| %>
+        <%= image_tag venue.photo %>
+        <%= venue.name %>
+        <% end %>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,8 @@
 @import "alert";
 @import "avatars";
 @import "badges";
+@import "banner";
+@import "button";
 
 // .card {
 //   height: 175px;
@@ -24,14 +26,6 @@
   font-size: 20px;
 
 }
-
-// .category-list {
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-//   align-items: flex-end;
-// }
 
 .card-category {
   text-transform: uppercase;

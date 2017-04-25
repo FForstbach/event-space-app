@@ -1,0 +1,8 @@
+<h1>Your Booking Overview</h1>
+<h3>these are all your bookings Mr. <%= current_user.email %></h3>
+
+<%= @bookings.each do |booking| %>
+  <p><%= booking.venue.name %></p>
+  <p><%= booking.venue %></p>
+  <p><%= booking %></p>
+<% end %>

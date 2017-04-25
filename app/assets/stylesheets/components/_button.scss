@@ -1,20 +1,22 @@
 .home-button {
 
-  color: #74D3AE;
-  border: 1px double #74D3AE;
+  color: white;
+  border: 1px double #678D58;
   border-radius: 100px;
-  padding: 40px 40px;
+  padding: 10px 10px;
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 20px;
   // opacity: 0.6;
   transition: all 0.5s;
-  background-color: white;
+  background-color: #A6C48A;
   margin-top: 80px;
 }
 
 .home-button:hover {
   opacity: 1;
-  background: #F2B7DE;
+  background: #678D58;
   text-decoration: none;
   color: white;
 }
+
+
