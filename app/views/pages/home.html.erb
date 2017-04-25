@@ -35,18 +35,25 @@
           <div class="card-category">co-working spaces</div>
         </div>
       </div>
+
       <div class="col-xs-6 col-sm-4">
+        <a href="<% link_to venues_path, query: "clubs" %>">
         <div class="card">
         <%= image_tag "clubspace.jpg", class: "venues" %>
           <div class="card-category">clubs</div>
         </div>
+        </a>
       </div>
+
       <div class="col-xs-6 col-sm-4">
-        <div class="card">
-        <%= image_tag "openconceptspaces.jpg", class: "venues" %>
-          <div class="card-category">mixed-use</div>
-        </div>
+        <%= link_to controller: "venues", query: "clubs" do %>
+          <div class="card">
+          <%= image_tag "openconceptspaces.jpg", class: "venues" %>
+            <div class="card-category">mixed-use</div>
+          </div>
+        <% end %>
       </div>
+
       <div class="col-xs-6 col-sm-4">
         <div class="card">
         <%= image_tag "outdoorspace.jpg", class: "venues" %>
@@ -74,4 +81,6 @@
       </div>
     </div>
   </div>
+
+  <%= link_to "test", venues_path, query: "test" %>
 

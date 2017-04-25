@@ -1,12 +1,21 @@
 class VenuesController < ApplicationController
 
   def index
-    @venues = Venue.all
+    if params[:city] != nil
+      @venues = Venue.where({ city: params[:city] })
+    elsif params[:query] != nil
+      @venues = Venue.where({ category: params[:query] })
+    else
+      @venues = Venue.all
+    end
+
     if @venue
       @venue = Venue.find(params[:id])
     else
     @venue = Venue.new
     end
+  end
+
   end
 
   def show
@@ -33,4 +42,3 @@ private
   def venue_params
     params.require(:venue).permit(:name, :address, :capacity, :price, :category, :photo, :photo_cache)
   end
-end

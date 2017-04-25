@@ -1,4 +1,5 @@
 class Venue < ApplicationRecord
+  include Filterable
   belongs_to :user
   validates :name, presence: true
   validates :address, presence: true
