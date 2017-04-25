@@ -1,6 +1,8 @@
 @import "alert";
 @import "avatars";
 @import "badges";
+@import "banner";
+@import "button";
 
 // .card {
 //   height: 175px;
@@ -22,12 +24,14 @@
   bottom: 10px;
   left: 10px;
   font-size: 20px;
-  text-transform: uppercase;
+
 }
 
-.category-list {
-  display: flex;
+.card-category {
+  text-transform: uppercase;
+
 }
+
 
 .category-item {
   padding: 10px;
@@ -35,7 +39,7 @@
 
 .venues {
     display: inline-block;
-    width: 100vh;
+    width: 100%;
     text-align: center;
     // height: 143px;
     // margin: 0 10px;
