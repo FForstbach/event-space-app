@@ -3,7 +3,23 @@
   <%= image_tag "banner3.png", class: "banner" %>
   </div>
 
-
+  <hr style="border-bottom: 0px">
+    <div class="container">
+        <div class="row">
+          <div class="home-content">
+            <h1>How we work</h1>
+            <div class="col-md-4 border-right">
+              <%= image_tag "searchicon.png" %><p>browse venues</p>
+            </div>
+            <div class="col-md-4 border-right">
+              <p>select date</p>
+            </div>
+            <div class="col-md-4">
+              <p>book it</p>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
     <div class="row">
@@ -45,12 +61,17 @@
       </div>
   </div>
   <div class="row">
-    <div class="text-center">
-      <p> <%= link_to "show venues", venues_path, class: "home-button" %> </p>
-        <% @featured_venues.each do |venue| %>
-        <%= image_tag venue.photo %>
-        <%= venue.name %>
-        <% end %>
+    <div class="text-center featured_venues">
+      <p> <%= link_to "show venues", venues_path, class: "home-button" %>
+      </p>
+      <div class="col-xs-6 col-sm-4">
+        <div class="card">
+          <% @featured_venues.each do |venue| %>
+          <%= image_tag venue.photo %>
+          <%= venue.name %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 
