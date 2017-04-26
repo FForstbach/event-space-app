@@ -1,14 +1,29 @@
-
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "bannerpic.jpg" %>');">
   <div class="banner-content">
     <h1>Find exclusive and unique venues for every occasion</h1>
   </div>
-
-
 </div>
 
+<div class="row">
+<%= render "shared/search_form" %>
+</div>
 
-
+    <div class="container">
+        <div class="row">
+          <div class="home-content">
+            <h1>How we work</h1>
+            <div class="col-md-4 border-right">
+              <%= image_tag "searchicon.png" %><p>browse venues</p>
+            </div>
+            <div class="col-md-4 border-right">
+              <p>select date</p>
+            </div>
+            <div class="col-md-4">
+              <p>book it</p>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <div class="row">
       <div class="col-xs-6 col-sm-4">
@@ -23,18 +38,25 @@
         <%= image_tag "coworkingspaces.jpg", class: "venues" %>
         </div>
       </div>
+
       <div class="col-xs-6 col-sm-4">
+        <a href="<% link_to venues_path, query: "clubs" %>">
         <div class="card">
         <div class="card-category">clubs</div>
         <%= image_tag "clubspace.jpg", class: "venues" %>
         </div>
+        </a>
       </div>
+
       <div class="col-xs-6 col-sm-4">
-        <div class="card">
-        <div class="card-category">mixed-use</div>
-        <%= image_tag "openconceptspaces.jpg", class: "venues" %>
-        </div>
+        <%= link_to controller: "venues", query: "clubs" do %>
+          <div class="card">
+          <div class="card-category">mixed-use</div>
+          <%= image_tag "openconceptspaces.jpg", class: "venues" %>
+          </div>
+        <% end %>
       </div>
+
       <div class="col-xs-6 col-sm-4">
         <div class="card">
         <div class="card-category">outdoor space</div>
@@ -49,27 +71,14 @@
       </div>
   </div>
 
-
   <div class="footer-bottom">
-
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-        <div class="copyright">
-
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="copyright">
           © 2017, Spacebook, All rights reserved
-
+          </div>
         </div>
-
       </div>
     </div>
-
   </div>
-
-</div>
-
-
-
