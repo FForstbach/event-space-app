@@ -1,5 +1,6 @@
 class VenuesController < ApplicationController
 
+
   def index
     if params[:city] != nil
       @venues = Venue.where({ city: params[:city] })
