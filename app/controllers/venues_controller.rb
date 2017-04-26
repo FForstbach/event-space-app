@@ -53,6 +53,9 @@ class VenuesController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
 private
 
   def venue_params
