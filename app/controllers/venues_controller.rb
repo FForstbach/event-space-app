@@ -1,8 +1,6 @@
 class VenuesController < ApplicationController
-<<<<<<< HEAD
+
   skip_before_action :authenticate_user!, only: [:index, :show]
-=======
->>>>>>> 9c6a4ccb0ca1d43e2b692c4189cd32496f4c1a65
 
   def index
     if params[:search] != nil
