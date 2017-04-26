@@ -1,18 +1,52 @@
-<div class="container">
-  <div class="row">
-  <h3>these are the venue details</h3>
-  <p>detail one</p>
-  <p>detail two</p>
-  <p>detail three</p>
-  <p>detail four</p>
-  </div>
-  <div class="row">
-    <h3>Book the Venue</h3>
-    <p><%= link_to "Book Now", new_venue_booking_path(params[:id]) %></p>
-  </div>
-  <div class="row">
-    <h3>this is the Google Maps</h3>
-  </div>
-</div>
 
+<div class="container">
+
+  <%= image_tag @venue.photo %>
+
+  <div class="banner-content">
+    <h1><%= @venue.name %></h1>
+  </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8"><h2>Information</h2></div>
+      <div class="col-xs-6 col-md-4"><h2>Summary</h2></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <p><%= @venue.address %></p>
+        <p><%= @venue.city %>"City"</p>
+        <p>Venue Category: <%= @venue.category %></p>
+        <p>Capacity: <%= @venue.capacity %></p>
+        <p>Price per Day (€): <%= @venue.price %></p>
+      </div>
+      <div class="col-xs-6 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="text-center">
+              <p> <%= @venue.name %></p>
+              <p><%= @venue.address %></p>
+                <hr>
+              <p> Guests: </p>
+              <p> Date: </p>
+                <hr>
+              <a class="home-button" href="#">Book now</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      <h3>Book the Venue</h3>
+        <p><%= link_to "Book Now", new_venue_booking_path(params[:id]) %></p>
+        <div class="row">
+        <h3>This is the Google Maps</h3>
+        </div>
+      </div>
+    </div>
 
