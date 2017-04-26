@@ -8,11 +8,19 @@ class VenuesController < ApplicationController
       marker.lat venue.latitude
       marker.lng venue.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
-    end
+      end
     elsif params[:city] != nil
-      @venues = Venue.where({ city: params[:city] })
+      @venues = Venue.where({ city: params[:city] }).where.not(latitude: nil, longitude: nil)
+      @hash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.lat venue.latitude
+      marker.lng venue.longitude
+      end
     elsif params[:query] != nil
-      @venues = Venue.where({ category: params[:query] })
+      @venues = Venue.where({ category: params[:query] }).where.not(latitude: nil, longitude: nil)
+      @hash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.lat venue.latitude
+      marker.lng venue.longitude
+      end
     else
       @venues = Venue.all
     end
