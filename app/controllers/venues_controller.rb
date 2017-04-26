@@ -1,5 +1,8 @@
 class VenuesController < ApplicationController
+<<<<<<< HEAD
   skip_before_action :authenticate_user!, only: [:index, :show]
+=======
+>>>>>>> 9c6a4ccb0ca1d43e2b692c4189cd32496f4c1a65
 
   def index
     if params[:search] != nil
@@ -55,6 +58,6 @@ class VenuesController < ApplicationController
 private
 
   def venue_params
-    params.require(:venue).permit(:name, :address, :capacity, :price, :category, :photo, :photo_cache)
+    params.require(:venue).permit(:name, :address, :capacity, :city, :price, :category, :photo, :photo_cache)
   end
 end
