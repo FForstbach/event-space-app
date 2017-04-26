@@ -1,28 +1,49 @@
 
 <div class="container">
-<!--  -->
+  <h1 class=text-center> Our Venues </h1>
+  <!--  -->
+  <p>Change your selection</p>
+  <%= render "shared/search_form" %>
+  <hr>
+  <div id="map" style="width: 100%; height: 300px;">
+    <div id="search_bar">
 
-<%= render "shared/search_form" %>
-
-<hr>
-<div class="row text-center">
-<h1> VENUES </h1>
-  <div class="col-xs-6 col-sm-3">
-    <div class="card text-center">
-        <div class="card-body">
-          <% @venues.each do |venue| %>
-              <p><%= link_to venue.name, venue_path(venue) %></p>
-              <p><%= venue.address %></p>
-              <p><%= venue.capacity %></p>
-              <p><%= venue.price %></p>
-              <hr>
-          <% end %>
-
-
-        </div>
     </div>
   </div>
 </div>
+<div class="container" id="cards-container">
+  <div class="row text-center">
+    <% @venues.each do |venue| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card text-center venues">
+          <div class="card-body">
+            <h3><%= link_to venue.name, venue_path(venue) %></h3>
+            <p><%= "Address: #{venue.address}" %></p>
+            <p><%= "Capacity: #{venue.capacity}" %></p>
+            <p><%= "Price: #{venue.price}" %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
+  <% content_for(:after_js) do %>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var handler = Gmaps.build('Google');
+        handler.buildMap({ internal: { id: 'map' } }, function() {
+          markers = handler.addMarkers(<%= raw @hash.to_json %>);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+          if (markers.length == 0) {
+            handler.getMap().setZoom(2);
+          } else if (markers.length == 1) {
+            handler.getMap().setZoom(14);
+          }
+        });
+      });
+    </script>
+  <% end %>
+</div>
 
 

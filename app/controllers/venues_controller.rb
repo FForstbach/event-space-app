@@ -1,11 +1,29 @@
 class VenuesController < ApplicationController
-
+<<<<<<< HEAD
+  skip_before_action :authenticate_user!, only: [:index, :show]
+=======
+>>>>>>> 9c6a4ccb0ca1d43e2b692c4189cd32496f4c1a65
 
   def index
-    if params[:city] != nil
-      @venues = Venue.where({ city: params[:city] })
+    if params[:search] != nil
+      @venues = lat.where.not(latitude: nil, longitude: nil)
+      @hash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.lat venue.latitude
+      marker.lng venue.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+      end
+    elsif params[:city] != nil
+      @venues = Venue.where({ city: params[:city] }).where.not(latitude: nil, longitude: nil)
+      @hash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.lat venue.latitude
+      marker.lng venue.longitude
+      end
     elsif params[:query] != nil
-      @venues = Venue.where({ category: params[:query] })
+      @venues = Venue.where({ category: params[:query] }).where.not(latitude: nil, longitude: nil)
+      @hash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.lat venue.latitude
+      marker.lng venue.longitude
+      end
     else
       @venues = Venue.all
     end
@@ -15,8 +33,6 @@ class VenuesController < ApplicationController
     else
     @venue = Venue.new
     end
-  end
-
   end
 
   def show
@@ -32,7 +48,8 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
     @venue.user = current_user
     if @venue.save
-      redirect_to venues_path
+      redir
+      ect_to venues_path
     else
       render :new
     end
@@ -41,5 +58,6 @@ class VenuesController < ApplicationController
 private
 
   def venue_params
-    params.require(:venue).permit(:name, :address, :capacity, :price, :category, :photo, :photo_cache)
+    params.require(:venue).permit(:name, :address, :capacity, :city, :price, :category, :photo, :photo_cache)
   end
+end
