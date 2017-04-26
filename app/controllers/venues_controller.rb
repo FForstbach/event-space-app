@@ -2,7 +2,14 @@ class VenuesController < ApplicationController
 
 
   def index
-    if params[:city] != nil
+    if params[:search] != nil
+      @venues = lat.where.not(latitude: nil, longitude: nil)
+      @hash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.lat venue.latitude
+      marker.lng venue.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
+    elsif params[:city] != nil
       @venues = Venue.where({ city: params[:city] })
     elsif params[:query] != nil
       @venues = Venue.where({ category: params[:query] })
@@ -15,16 +22,6 @@ class VenuesController < ApplicationController
     else
     @venue = Venue.new
     end
-
-    # @flats = Flat.where.not(latitude: nil, longitude: nil)
-
-    # @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
-    #   marker.lat flat.latitude
-    #   marker.lng flat.longitude
-    #   # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
-    # end
-  end
-
   end
 
   def show
@@ -52,3 +49,4 @@ private
   def venue_params
     params.require(:venue).permit(:name, :address, :capacity, :price, :category, :photo, :photo_cache)
   end
+end
