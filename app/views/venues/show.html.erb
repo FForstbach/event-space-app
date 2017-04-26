@@ -29,7 +29,7 @@
               <p> Guests: </p>
               <p> Date: </p>
                 <hr>
-              <a class="home-button" href="#">Book now</a>
+              <a class="home-button" href="<%= new_venue_booking_path(params[:id]) %>">Book now</a>
 
             </div>
           </div>
@@ -39,14 +39,4 @@
 
     </div>
 
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-8">
-      <h3>Book the Venue</h3>
-        <p><%= link_to "Book Now", new_venue_booking_path(params[:id]) %></p>
-        <div class="row">
-        <h3>This is the Google Maps</h3>
-        </div>
-      </div>
-    </div>
 
