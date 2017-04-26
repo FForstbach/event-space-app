@@ -11,12 +11,14 @@
     <div class="card text-center">
         <div class="card-body">
           <% @venues.each do |venue| %>
-            <p><%= venue.name %></p>
-            <p><%= venue.address %></p>
-            <p><%= venue.capacity %></p>
-            <p><%= venue.price %></p>
-            <hr>
+              <p><%= link_to venue.name, venue_path(venue) %></p>
+              <p><%= venue.address %></p>
+              <p><%= venue.capacity %></p>
+              <p><%= venue.price %></p>
+              <hr>
           <% end %>
+
+
         </div>
     </div>
   </div>
