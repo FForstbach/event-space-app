@@ -2,16 +2,8 @@
 <div class="container">
 <!--  -->
 
-<div class="row">
-  <%= simple_form_for @venue, as: 'user_inline',
-    wrapper: :inline_form,
-    html: { class: 'form-inline' } do |f| %>
-    <%= f.error_notification %>
-    <%= f.input :address, placeholder: 'Address' %>
-    <%= f.input :capacity, placeholder: 'Capacity' %>
-    <%= f.submit "Search again", class: "btn btn-primary" %>
-  <% end %>
-</div>
+<%= render "shared/search_form" %>
+
 <hr>
 <div id="map" style="width: 100%; height: 600px;"></div>
 
@@ -21,12 +13,14 @@
     <div class="card text-center">
         <div class="card-body">
           <% @venues.each do |venue| %>
-            <p><%= venue.name %></p>
-            <p><%= venue.address %></p>
-            <p><%= venue.capacity %></p>
-            <p><%= venue.price %></p>
-            <hr>
+              <p><%= link_to venue.name, venue_path(venue) %></p>
+              <p><%= venue.address %></p>
+              <p><%= venue.capacity %></p>
+              <p><%= venue.price %></p>
+              <hr>
           <% end %>
+
+
         </div>
     </div>
   </div>
