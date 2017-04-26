@@ -15,6 +15,14 @@ class VenuesController < ApplicationController
     else
     @venue = Venue.new
     end
+
+    # @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+    # @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
+    #   marker.lat flat.latitude
+    #   marker.lng flat.longitude
+    #   # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    # end
   end
 
   end
@@ -32,7 +40,8 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
     @venue.user = current_user
     if @venue.save
-      redirect_to venues_path
+      redir
+      ect_to venues_path
     else
       render :new
     end
