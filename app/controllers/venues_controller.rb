@@ -1,6 +1,5 @@
 class VenuesController < ApplicationController
 
-
   def index
     if params[:search] != nil
       @venues = lat.where.not(latitude: nil, longitude: nil)
@@ -55,6 +54,6 @@ class VenuesController < ApplicationController
 private
 
   def venue_params
-    params.require(:venue).permit(:name, :address, :capacity, :price, :category, :photo, :photo_cache)
+    params.require(:venue).permit(:name, :address, :capacity, :city, :price, :category, :photo, :photo_cache)
   end
 end
