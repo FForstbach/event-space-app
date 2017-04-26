@@ -1,11 +1,13 @@
 
 <div class="container">
 <!--  -->
-
 <%= render "shared/search_form" %>
-
 <hr>
-<div id="map" style="width: 100%; height: 600px;"></div>
+<div id="map" style="width: 100%; height: 300px;">
+  <div id="search_bar">
+
+  </div>
+</div>
 
 <div class="row text-center">
 <h1> VENUES </h1>
@@ -27,7 +29,7 @@
 </div>
 
 <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
+  <script type="text/javascript">
     $(document).ready(function() {
       var handler = Gmaps.build('Google');
       handler.buildMap({ internal: { id: 'map' } }, function() {
@@ -41,7 +43,7 @@
         }
       });
     });
-  <% end %>
+  </script>
 <% end %>
 
 
