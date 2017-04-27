@@ -8,7 +8,7 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 5px;
 
 }
 
@@ -43,11 +43,11 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: rgb(27, 97, 241);
-  font-size: 14px;
+  color: white;
+  font-size: 20px;
 }
 .navbar-wagon-link:hover {
-  color: rgb(27, 97, 241);
+  color: #F19953;
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@
   padding: 0 20px;
   border-radius: 100px;
   line-height: 40px;
-  background-color: rgb(27, 97, 241);
+  background-color: #F19953;
   color: white;
   font-weight: lighter;
   font-size: 14px;
