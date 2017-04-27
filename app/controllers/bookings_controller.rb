@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @user = current_user
+    @venues = Venue.where(user_id: @user.id)
   end
 
   def destroy
