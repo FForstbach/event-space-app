@@ -23,3 +23,21 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+@media (max-width: 900px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    width: 300px;
+  }
+}

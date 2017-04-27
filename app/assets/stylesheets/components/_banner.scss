@@ -40,7 +40,8 @@
 .form-home {
   position: relative;
   text-align: center;
-  margin-top: 250px;
+  margin-top: 560px;
+  color: white;
 }
 
 .form-new {
@@ -51,6 +52,13 @@
 }
 
 .wrapper-content {
-      margin-top: 47vh;
-      margin-bottom: 20px;
+      margin-top: 17vh;
+      margin-bottom: 42px;
+      padding-bottom: 120px;
+      padding-top: 120px;
+      color: #fff;
+}
+
+.form-home h1 {
+  font-size: 50px;
 }
