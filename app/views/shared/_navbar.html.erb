@@ -1,11 +1,14 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-
-  <a href="<% root_path %>" class="navbar-wagon-brand">
-
+  <% if user_signed_in? %>
+    <a href="<% bookings_path %>" class="navbar-wagon-brand">
     <%= cl_image_tag "logo_hkd8pa", class: "banner_logo" %>
-
-  </a>
+    </a>
+  <% else %>
+    <a href="<% root_path %>" class="navbar-wagon-brand">
+    <%= cl_image_tag "logo_hkd8pa", class: "banner_logo" %>
+    </a>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
