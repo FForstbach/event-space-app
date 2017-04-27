@@ -1,7 +1,7 @@
 <div class="form-new">
 <%= simple_form_for :venue, url: venues_path, method: "get",
   wrapper: :inline_form,
-  html: { class: 'form-inline', style: 'margin-top: -80px' } do |f| %>
+  html: { class: 'form-inline' } do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :city, collection: [["Berlin","berlin"],["Wien","wien"],["Köln","köln"]], input_html: { name: 'city' }, prompt: "Select City", selected: params[:city] %>
