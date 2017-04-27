@@ -60,7 +60,6 @@ venues = Venue.create([{
   photo: "https://www.google.at/search?q=party+venues+berlin&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjEzNSb48HTAhUTrRQKHd67CEkQ_AUIBygC&biw=1621&bih=779#imgrc=fZiTcsEz08D9GM:"
   }]
 )
-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #

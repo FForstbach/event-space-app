@@ -1,8 +1,31 @@
-<h1>Your Booking Overview</h1>
-<h3>these are all your bookings Mr. <%= current_user.email %></h3>
+<div class="container">
+  <h1 class="text-center">Hello Mr. <%= current_user.last_name %></h1>
+  <h3 class="text-center">these are your bookings</h3>
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+          <td>Name</td>
+          <td>Address</td>
+          <td>Start</td>
+          <td>End</td>
+          <td>Cancel</td>
 
-<%= @bookings.each do |booking| %>
-  <p><%= booking.venue.name %></p>
-  <p><%= booking.venue %></p>
-  <p><%= booking %></p>
-<% end %>
+          </tr>
+        </thead>
+        <tbody class="table-hover">
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td><%= booking.venue.name %></td>
+              <td><%= booking.venue.address %></td>
+              <td><%= booking.start %></td>
+              <td><%= booking.end %></td>
+              <td><%= link_to "Cancel Booking", booking_path(booking), method: "delete"  %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

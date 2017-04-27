@@ -1,22 +1,23 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-
-  <a href="<% root_path %>" class="navbar-wagon-brand">
-
-    <%= cl_image_tag "logo_2_wohvrl", class: "banner_logo" %>
-
-  </a>
+  <% if user_signed_in? %>
+    <a href="<% bookings_path %>" class="navbar-wagon-brand">
+    <%= cl_image_tag "logo_hkd8pa", class: "banner_logo" %>
+    </a>
+  <% else %>
+    <a href="<% root_path %>" class="navbar-wagon-brand">
+    <%= cl_image_tag "logo_hkd8pa", class: "banner_logo" %>
+    </a>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
+    <%= link_to "Search Venues", venues_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <!-- Text link -->
+    <%= link_to "Add your own venue", new_venue_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Profile picture and dropdown -->
     <% if user_signed_in? %>
@@ -42,6 +43,8 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="<%= bookings_path %>">My Bookings</a></li>
+        <li><%= link_to "Search Venue", venues_path %></li>
+        <li><%= link_to "Add your venue", new_venue_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: "delete"  %></li>
       </ul>
     </div>
