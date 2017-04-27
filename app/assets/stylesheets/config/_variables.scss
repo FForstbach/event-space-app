@@ -3,8 +3,14 @@
  * ------------------------------------- */
 // Google fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-$base-font: "Roboto", "Helvetica", "sans-serif";
-$header-font: "Roboto", "Helvetica", "sans-serif";
+$base-font: "Karla", "Helvetica", "sans-serif";
+$header-font: "Rubik", "Helvetica", "sans-serif";
+
+@import url('https://fonts.googleapis.com/css?family=Karla%7CMuli%7CQuicksand:500%7CRubik');
+$font-family: ‘Quicksand’, sans-serif;
+$font-family: ‘Muli’, sans-serif;
+$font-family: ‘Karla’, sans-serif;
+$font-family: ‘Rubik’, sans-serif;
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -30,7 +36,7 @@ $red: #EE5F5B;
 $blue: #F19953;
 $yellow: #FDB631;
 $orange: #E67E22;
-$green: #32B796;
+$green: #F19953;
 $gray: #000000;
 
 
