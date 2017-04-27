@@ -14,6 +14,7 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
+    <%= link_to "Search Venues", venues_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Text link -->
     <%= link_to "Add your own venue", new_venue_path, class: "navbar-wagon-item navbar-wagon-link" %>
@@ -42,6 +43,7 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="<%= bookings_path %>">My Bookings</a></li>
+        <li><%= link_to "Search Venue", venues_path %></li>
         <li><%= link_to "Add your venue", new_venue_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: "delete"  %></li>
       </ul>
