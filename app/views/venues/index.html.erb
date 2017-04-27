@@ -1,30 +1,42 @@
 
-<div class="container">
 
-    <div class=text-center>
-      <h1>Discover Our Venues</h1>
-    </div>
-    <%= render "shared/new_form" %>
-    <hr>
+
     <div id="map" style="width: 100%; height: 300px;">
       <div id="search_bar"></div>
     </div>
 
-  <div class="row text-center" style="margin-left: -42px;">
-    <% @venues.each do |venue| %>
-      <div class="col-xs-6 col-sm-4">
-        <div class="card venues">
-          <div class="card-body">
-            <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
-            <p><%= "Address: #{venue.address}" %></p>
-            <p><%= "Capacity: #{venue.capacity}" %></p>
-            <p><%= "Price: #{venue.price}" %></p>
-          </div>
+
+
+<div class=text-center>
+      <h1>Discover Our Venues</h1>
+    </div>
+
+    <%= render "shared/new_form" %>
+
+  <div class="container" id="index">
+
+
+
+        <div class="row text-center" style="margin-left: -42px;">
+          <% @venues.each do |venue| %>
+            <div class="col-xs-6 col-sm-4">
+              <div class="card venues">
+                <div class="card-body" id="venue_results" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://s-media-cache-ak0.pinimg.com/originals/97/83/55/9783552a8a82f1bec0f0ee16131abdf5.jpg');">
+                  <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
+                  <hr>
+                  <p><%= "Address: #{venue.address}" %></p>
+                  <p><%= "Capacity: #{venue.capacity}" %></p>
+                  <p class="btn btn-primary"><%= "Price: #{venue.price}" %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
-      </div>
-    <% end %>
+
+
   </div>
 </div>
+
 
 <% content_for(:after_js) do %>
   <script type="text/javascript">
