@@ -25,9 +25,10 @@
             <p> <%= @venue.name %></p>
             <p><%= @venue.address %></p>
               <hr>
-            <p> Guests: </p>
-            <p> Date: </p>
+            <%= render "shared/form_show_venue" %>
               <hr>
+
+
               <%= button_to "Book now", venue_bookings_path(params[:id]),  method: "post", class: "home-button"  %>
           </div>
         </div>
