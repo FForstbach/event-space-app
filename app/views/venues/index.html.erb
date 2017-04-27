@@ -1,9 +1,8 @@
 
 <div class="container">
-  <h1 class=text-center> Our Venues </h1>
-  <!--  -->
-  <p>Change your selection</p>
-  <%= render "shared/search_form" %>
+  <div class=text-center>
+    <h1> Discover Our Venues </h1>
+  <%= render "shared/new_form" %>
   <hr>
   <div id="map" style="width: 100%; height: 300px;">
     <div id="search_bar">
@@ -14,8 +13,8 @@
 <div class="container" id="cards-container">
   <div class="row text-center">
     <% @venues.each do |venue| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card text-center venues">
+      <div class="col-xs-6 col-sm-4">
+        <div class="card venues">
           <div class="card-body">
             <h3><%= link_to venue.name, venue_path(venue) %></h3>
             <p><%= "Address: #{venue.address}" %></p>
