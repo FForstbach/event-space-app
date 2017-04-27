@@ -1,22 +1,28 @@
 .card {
-  height: 175px;
+  height: 242px;
   background-size: cover !important;
-  background-color: white;
+
   color: #eaebef;
   position: relative;
+
 }
 
 .card .venues {
   border: 0.5px solid #bcbaba;
-  padding: 10px 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+  padding: 1px;
+  margin: 13px 0;
+  border-radius: 14px;
+  padding-bottom: 1px;
+  padding-top: 38px;
+  max-height: 218px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .card-user {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 30px;
 }
 .card-category {
   position: absolute;
@@ -43,7 +49,6 @@
   right: 0;
   width: 100%;
   z-index:2;
-  background: black;
   opacity: 0;
 }
 .card-link:hover{
@@ -58,4 +63,9 @@
 .card-body p {
   color: black;
   font-size: 0.8em;
+}
+
+.venues img {
+  vertical-align: middle;
+  height: 253px;
 }
