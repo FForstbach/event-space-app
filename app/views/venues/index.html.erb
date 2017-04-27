@@ -15,7 +15,7 @@
       <div class="col-xs-6 col-sm-4">
         <div class="card venues">
           <div class="card-body">
-            <h3><%= link_to venue.name, venue_path(venue) %></h3>
+            <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
             <p><%= "Address: #{venue.address}" %></p>
             <p><%= "Capacity: #{venue.capacity}" %></p>
             <p><%= "Price: #{venue.price}" %></p>
