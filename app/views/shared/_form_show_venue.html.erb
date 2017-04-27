@@ -1,0 +1,6 @@
+<%= simple_form_for @booking do |f| %>
+    <%= f.input :capacity, collection: [["10 to 20",20],["21 to 50",50],["51 to 200",200]], input_html: { name: 'guests' }, prompt: "Select Guests", selected: params[:city] %>
+    <%= f.input :start %>
+    <%= f.input :end %>
+    <%= f.submit "Search", class: "btn btn-primary", name: nil %>
+<% end %>
