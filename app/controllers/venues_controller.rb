@@ -46,14 +46,10 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
     @venue.user = current_user
     if @venue.save
-      redir
-      ect_to venues_path
+      redirect_to bookings_path
     else
       render :new
     end
-  end
-
-  def destroy
   end
 
 private
