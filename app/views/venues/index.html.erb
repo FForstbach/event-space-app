@@ -10,10 +10,10 @@
       <div id="search_bar"></div>
     </div>
 
-  <div class="row text-center" style="margin-left: -42px;">
+  <div class="row text-center">
     <% @venues.each do |venue| %>
       <div class="col-xs-6 col-sm-4">
-        <div class="card venues">
+        <div class="card-venues">
           <div class="card-body">
             <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
             <p><%= "Address: #{venue.address}" %></p>
