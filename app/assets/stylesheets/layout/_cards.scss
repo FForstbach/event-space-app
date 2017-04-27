@@ -36,6 +36,16 @@
   left: 10px;
   font-size: 117%;
   text-transform: uppercase;
+  font-family: Quicksand, sans-serif, ;
+}
+
+.card-category:hover {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 117%;
+  text-transform: uppercase;
+  color: #F19953;
 }
 .card-description {
   position: absolute;
@@ -62,7 +72,7 @@
 }
 
 .card-body h3 {
-  color: #678D58;
+  color: #F19953;
   font-size: 1em;
 }
 
