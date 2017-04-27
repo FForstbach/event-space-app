@@ -24,7 +24,9 @@
                 <div class="card-body" id="venue_results" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://s-media-cache-ak0.pinimg.com/originals/97/83/55/9783552a8a82f1bec0f0ee16131abdf5.jpg');">
                   <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
                 </div>
-                  <p class="btn btn-primary" id="price"><%= "Price: #{venue.price} |  Capacity: #{venue.capacity}" %></p>
+
+                <p class="glyphicon glyphicon-sunglasses" id="price2"><%= "#{venue.capacity}" %></p>
+                <p class="glyphicon glyphicon-euro" id="price"><%= "#{venue.price}"%></p>
               </div>
             </div>
           <% end %>

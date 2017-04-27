@@ -30,6 +30,8 @@
   right: 10px;
   top: 30px;
 }
+
+
 .card-category {
   position: absolute;
   top: 10px;
@@ -73,12 +75,14 @@
 
 .card-body h3 {
   color: #F19953;
-  font-size: 1em;
+  font-size: 24px;
+  font-family: ‘Rubik’, sans-serif;
 }
 
 .card-body p {
   color: black;
   font-size: 0.8em;
+  font-family: ‘Quicksand’, sans-serif;
 }
 
 .venues img {
@@ -91,27 +95,25 @@
 }
 
 #venue_results {
+    margin-top: 20px;
+    margin-left: 6px;
+    margin-right: 30px;
+    height: 91%;
+    border: 0.5px solid #bcbaba;
+    width: 426px;
+}
+
+#venue_results {
   margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 40px;
   height: 91%;
   border: 0.5px solid #bcbaba;
+  justify-content: space-between;
+  width: 417px;
 }
 
-.pvenues {
-  color: white;
-  font-size: 15px;
-  text-indent: left;
-  margin-top: 47px;
-
-}
-
-#venue_results h3 {
-  color: white;
-  font-size: 20px;
-  text-indent: left;
-  margin-top: -173px;
-  padding-top: 48%
+.glyphicon glyphicon-euro {
 
 }
 
