@@ -8,21 +8,27 @@
   font-size: 20px;
   // opacity: 0.6;
   transition: all 0.5s;
-  background-color: rgb(27, 97, 241);
+  background-color: #F19953;
   margin-top: 80px;
 }
 
 .home-button:hover {
   opacity: 1;
-  background: #1B61F1;
+  background: transparent;
   text-decoration: none;
   color: white;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #1B61F1;
-  background-color: #1B61F1;
-  border-color: #1B61F1;
+  background-color: #F19953;
+  border-color: white;
+
+}
+
+.btn-primary:hover{
+  color: #fff;
+  background-color: transparent;
+  border-color: white;
 
 }
