@@ -17,5 +17,15 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @user = current_user
+    @venues = Venue.where(user_id: @user.id)
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    if @booking.destroy
+      redirect_to bookings_path
+    else
+      render :new
+    end
   end
 end
