@@ -3,7 +3,7 @@
   wrapper: :inline_form,
   html: { class: 'form-inline' } do |f| %>
   <%= f.error_notification %>
-  <%= f.input :city, collection: [ "Berlin", "Wien", "Baden-Baden", "Stockholm", "Köln" ], input_html: { name: 'city' }, prompt: "Select City", selected: params[:city] %>
+  <%= f.input :city, collection: [["Berlin","berlin"],["Wien","wien"],["Köln","köln"]], input_html: { name: 'city' }, prompt: "Select City", selected: params[:city] %>
   <%= f.submit "Search", class: "btn btn-primary", name: nil %>
 <% end %>
 </div>
