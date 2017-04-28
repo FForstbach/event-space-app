@@ -3,7 +3,6 @@ class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
     if params[:city] && params[:capacity]
       @venues = Venue.where(city: params[:city]).where("capacity > ?", params[:capacity])
       build_markers(@venues)
@@ -18,11 +17,10 @@ class VenuesController < ApplicationController
       build_markers(@venues)
     end
 
-
     if @venue
       @venue = Venue.find(params[:id])
     else
-    @venue = Venue.new
+      @venue = Venue.new
     end
   end
 

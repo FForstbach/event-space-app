@@ -23,6 +23,8 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'geocoder'
 gem "coffee-rails"
 gem "gmaps4rails"
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
