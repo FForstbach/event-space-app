@@ -12,8 +12,31 @@
   padding: 0px 0px;
 }
 
+.profile_cards td#venue_name a {
+  color: #EF985A;
+  font-weight: bolder;
+}
+
+.profile_cards td#venue_name a:hover {
+  color: #ed7525;
+  text-decoration: underline;
+}
+
+.profile_cards td#delete a {
+  color: #f22121;
+}
+
+.profile_cards td#delete a:hover {
+  color: #c14319;
+}
+
 .profile_cards img {
   padding-bottom: 10px;
+}
+
+.profile_cards tbody > tr {
+  background-color: #f9f7f7;
+  height: 80px;
 }
 
 .profile_cards#avatar {
