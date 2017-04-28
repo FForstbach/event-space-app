@@ -1,29 +1,26 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <% if user_signed_in? %>
-    <a href="<% bookings_path %>" class="navbar-wagon-brand">
+    <a href="/" class="navbar-wagon-brand">
     <%= cl_image_tag "Logo_orange_oap9y4", class: "banner_logo" %>
     </a>
-  <% else %>
-    <a href="<% root_path %>" class="navbar-wagon-brand">
-    <%= cl_image_tag "Logo_orange_oap9y4", class: "banner_logo" %>
-    </a>
-  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
-    <%= link_to "Search Venues", venues_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Text link -->
-    <%= link_to "Add your own venue", new_venue_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <div>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      <%= link_to "Add your own venue", new_venue_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    </div>
 
     <!-- Profile picture and dropdown -->
     <% if user_signed_in? %>
       <div class="navbar-wagon-item">
-        <div class="dropdown">
+        <div class="dropdown text-center">
           <img src="http://www.fillmurray.com/g/60/60" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <%= link_to "#{current_user.first_name.humanize}", bookings_path, class: "navbar-wagon-link" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li><a href="<%= bookings_path %>">My Bookings</a></li>
             <li><%= link_to "Log Out", destroy_user_session_path, method: "delete"  %></li>
