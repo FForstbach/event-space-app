@@ -8,9 +8,12 @@
       <div class="col-xs-3">
         <div class="profile_cards text-center" id="avatar">
           <img src="http://www.fillmurray.com/60/60" alt="user" class="avatar-large">
-          <p><%= @user.first_name.humanize %> <%= @user.last_name.humanize %> </p>
-          <p><%= @user.email.humanize %></p>
-
+          <% if @user.first_name.nil? %>
+            <p><%= @user.email.humanize %></p>
+          <% elsif %>
+            <p><%= @user.first_name.humanize %></p>
+            <p><%= @user.email %></p>
+          <% end %>
         </div>
       </div>
 
