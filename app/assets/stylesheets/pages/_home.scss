@@ -1,4 +1,4 @@
-/* -------------------------------------
+/* ------------------jj-------------------
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
@@ -7,6 +7,37 @@
   position: center;
   background-color: transparent;
   max-height: 400px;
+}
+
+.video_box {
+  z-index: 1;
+}
+
+.home1 {
+  position: absolute;
+  margin-top: -31px;
+  margin-left: -362px;
+  font-size: 32px;
+  color: #f3984b;
+  z-index: 5;
+}
+
+
+.user1 {
+  position: absolute;
+  margin-top: -31px;
+  margin-left: -53px;
+  font-size: 28px;
+  color: #f3984b;
+  z-index: 5;
+}
+
+
+.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-right: 89px;
 }
 
 

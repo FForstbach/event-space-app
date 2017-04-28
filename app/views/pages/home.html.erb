@@ -1,6 +1,7 @@
 
 
-    <div class="video_box ">
+
+    <div class="video_box">
     <div  class="embed-responsive embed-responsive-16by9 container-fluid">
         <div class="row">
         <video autoplay muted loop class="embed-responsive-item video-banner" id="autovid" width="100%" >
@@ -15,15 +16,21 @@
 
 
 
+
+
+
   <div class="wrapper-content">
      <h2 class="text-center" style="font-size: 210%">Choose a category</h2>
      <br><br>
     <div class="container">
 
+
         <div class="row">
-        <%= link_to controller: "venues", query: "bars" do %>
+
         <div class="col-xs-6 col-sm-4">
+
           <div class="card">
+           <%= link_to controller: "venues", query: "bars" do %>
           <div class="card-category">bars</div>
           <%= cl_image_tag "bars_rcch7x", class: "venues" %>
           </div>
@@ -84,3 +91,4 @@
       </div>
     </div>
   </div>
+
