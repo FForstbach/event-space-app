@@ -113,8 +113,16 @@
   width: 417px;
 }
 
-.glyphicon glyphicon-euro {
-
+#icon {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  width: 33%;
+  margin-top: -62px;
+  height: 46%;
+  border-radius: 15px;
+  margin-left: 639px;
+  z-index: -1;
 }
 
 
