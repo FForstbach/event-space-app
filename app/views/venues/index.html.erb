@@ -12,27 +12,21 @@
     <%= render "shared/new_form" %>
 
   <div class="container" id="index">
-
-
-
-        <div class="row text-center" style="margin-left: -42px;">
-          <% @venues.each do |venue| %>
-            <div class="col-xs-6 col-sm-4">
-              <div class="card venues">
-              <i class="fa fa-user iconuser1" aria-hidden="true"></i>
-              <i class="fa fa-eur iconuser2" aria-hidden="true"></i>
-                <div class="card-body" id="venue_results" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://s-media-cache-ak0.pinimg.com/originals/97/83/55/9783552a8a82f1bec0f0ee16131abdf5.jpg');">
-                  <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
-                </div>
-                <p class="glyphicon" id="price2"><%= "#{venue.capacity}" %></p>
-                <p class="glyphicon" id="price"><%= "#{venue.price}"%></p>
-
-              </div>
+    <div class="row text-center" style="margin-left: -42px;">
+      <% @venues.each do |venue| %>
+        <div class="col-xs-6 col-sm-4">
+          <div class="card venues">
+          <i class="fa fa-user iconuser1" aria-hidden="true"></i>
+          <i class="fa fa-eur iconuser2" aria-hidden="true"></i>
+            <div class="card-body" id="venue_results" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.5) 50%), url('<%= cl_image_path venue.photo_url, height: 700, width: 700, crop: :fill %>');">
+              <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
             </div>
-          <% end %>
+            <p class="glyphicon" id="price2"><%= "#{venue.capacity}" %></p>
+            <p class="glyphicon" id="price"><%= "#{venue.price}"%></p>
+          </div>
         </div>
-
-
+      <% end %>
+    </div>
   </div>
 </div>
 
