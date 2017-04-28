@@ -30,11 +30,11 @@
             <tbody class="table-hover" id="booking">
               <% @bookings.each do |booking| %>
                 <tr id="<%= booking.id %>">
-                  <td><%= link_to booking.venue.name, venue_path(booking.venue) %></td>
+                  <td id="venue_name"><%= link_to booking.venue.name, venue_path(booking.venue) %></td>
                   <td><%= booking.venue.address %></td>
                   <td><%= booking.start %></td>
                   <td><%= booking.end %></td>
-                  <td><%= link_to "Cancel Booking", booking_path(booking), method: "delete", remote: true %></td>
+                  <td id="delete"></i><%= link_to "Cancel Booking", booking_path(booking), method: "delete", remote: true %></td>
                 </tr>
               <% end %>
             </tbody>
@@ -57,7 +57,7 @@
             <tbody class="table-hover">
               <% @venues.each do |venue| %>
                 <tr>
-                  <td><%= link_to venue.name, venue_path(venue) %></td>
+                  <td id="venue_name"><%= link_to venue.name, venue_path(venue) %></td>
                   <td><%= venue.address %></td>
                   <td><%= venue.city %></td>
                   <td><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=50x50&sensor=false&maptype=roadmap&markers=color:red|#{venue.address}" %></td>
