@@ -25,8 +25,9 @@
                   <h3><%= link_to venue.name, venue_path(venue, :capacity => params[:capacity]) %></h3>
                 </div>
 
-                <p class="glyphicon glyphicon-sunglasses" id="price2"><%= "#{venue.capacity}" %></p>
-                <p class="glyphicon glyphicon-euro" id="price"><%= "#{venue.price}"%></p>
+                <p class="glyphicon" id="price2"><%= "#{venue.capacity}" %></p>
+
+                <p class="glyphicon" id="price"><%= "#{venue.price}"%></p>
               </div>
             </div>
           <% end %>
