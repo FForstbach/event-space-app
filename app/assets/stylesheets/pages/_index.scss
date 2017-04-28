@@ -16,21 +16,17 @@ a {
 }
 
 #price {
-  padding-bottom: 5px;
-  padding-top: -8px;
-  padding: 13px;
-  margin-top: 190px;
-  width: 10%;
-  margin-left: -181px;
-  border-radius: 0px;
-  padding-right: 37%;
   border-top-left-radius: 15px;
-  border-top-right-radius: 2px;
-  background: rgba(228, 145, 86, 1);
+  background: #e49156;
   height: 20%;
   font-size: 22px;
   position: absolute;
   font-family: ‘Rubik’, sans-serif;
+  top: 79%;
+  left: 17%;
+  right: 49%;
+  padding-top: 5%;
+  padding-right: 4%;
 }
 
 
@@ -38,21 +34,40 @@ a {
 #price2 {
   padding-bottom: -9px;
   padding-top: -8px;
-  padding: 13px;
-  margin-top: 190px;
-  width: 80%;
-  margin-left: -181px;
-  margin-right: 83px;
-  border-radius: 0px;
-  padding-left: 64%;
-  border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background: rgba(255, 255, 255, 0.3);
   height: 20%;
   font-size: 22px;
   position: absolute;
   font-family: ‘Rubik’, sans-serif;
+  right: 72px;
+  bottom: 0px;
+  top: 79%;
+  left: 48%;
+  padding-top: 5%;
+  padding-left: 2%;
+}
 
+.iconuser1 {
+  position: absolute;
+  margin-top: -31px;
+  margin-left: -53px;
+  font-size: 28px;
+  color: #white;
+  z-index: 5;
+  top: 98%;
+  left: 86%;
+}
+
+.iconuser2 {
+  position: absolute;
+  margin-top: -31px;
+  margin-left: -53px;
+  font-size: 28px;
+  color: #white;
+  z-index: 5;
+  top: 98%;
+  left: 33%;
 }
 
 
