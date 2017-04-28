@@ -2,24 +2,60 @@
     <%= f.input :capacity, collection: [["10 to 20",20],["21 to 50",50],["51 to 200",200]], input_html: { name: 'guests' }, prompt: "Select Guests", selected: params[:city] %>
     <% end %>
 
-<div class="container">
+
+
+<div class="calendars">
+  <div class="container">
     <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
+      <div class="col-xs-6 col-md-4" style="display: table-cell;">
+<!--       <div class="row"> -->
+
+      <li>
+          <div class="form-group">
+              <div class='input-group date' id='datetimepicker6'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+<!--           </div>
+      </div> -->
     </div>
+    </li>
+    <li>
+<!--     <div class="row"> -->
+<!--       <div class="col-xs-6 col-md-4"> -->
+          <div class="form-group">
+              <div class='input-group date' id='datetimepicker7'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+              </div>
+
+          </div>
+
+<!--       </div> -->
+  </div>
 </div>
+<!-- </div> -->
 
 <!--  -->
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
