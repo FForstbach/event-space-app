@@ -9,7 +9,8 @@
       <%= f.input :address %>
       <%= f.input :capacity %>
       <%= f.input :price %>
-      <%= f.input :category, collection: ["Party", "Conference"] %>
+      <%= f.input :category, collection: [["Conference","conference"],["Bars","bars"],["Clubs","clubs"],["Mixed Usage","mixed_usage"],["Co-Working","coworking"],["Outdoor","outdoor"]] %>
+      <%= f.input :city, collection: [["Berlin","berlin"],["Wien","wien"],["Köln","köln"]] %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit "Submit Venue", class: "btn btn-primary" %>
